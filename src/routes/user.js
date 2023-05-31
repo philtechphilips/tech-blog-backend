@@ -13,8 +13,9 @@ router.use(
   })
 );
 
-// Register Routes
+// Authentication Routes
 router.post("/register", signupValidator, UserController.register);
 router.post("/login", loginValidator, UserController.login);
+router.post("/logout", auth, UserController.logout);
 
 module.exports = router;
