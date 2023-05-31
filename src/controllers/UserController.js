@@ -26,5 +26,21 @@ const register = async function (req, res) {
     }
   };
   
+
+  const login = async function (req, res) {
+    try {
+      if (!req.body.email || !req.body.password) {
+        throw new Error("Email and password are required");
+      }
+      const user = await User.findByCredentials(
+        req.body.email,
+        req.body.password
+      );
+      const token = await user.generateAuthToken();
+      res.status(201).send({ user, token });
+    } catch (e) {
+      res.status(400).send(e.message);
+    }
+  };
   
-  module.exports = { register }
+  module.exports = { register, login }
