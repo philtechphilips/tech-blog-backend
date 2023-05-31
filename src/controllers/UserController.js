@@ -35,7 +35,7 @@ const login = async function (req, res) {
       req.body.password
     );
     const token = await user.generateAuthToken();
-    res.status(201).send({ user, token });
+    res.status(200).send({ user, token });
   } catch (e) {
     res.status(400).send(e.message);
   }
