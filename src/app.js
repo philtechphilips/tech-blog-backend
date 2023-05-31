@@ -5,6 +5,7 @@ const compression = require("compression");
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/user");
 const categoryRoutes = require("./routes/category");
+const postRoutes = require("./routes/post");
 const initialize = require("./config/db")
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true, parameterLimit: "100000" }));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/category", categoryRoutes);
+app.use("/api/post", postRoutes);
 
 initialize()
 
