@@ -6,4 +6,4 @@ const CommentSchema = Joi.object({
 
 module.exports = {
   CommentSchema,
-};
+};  
