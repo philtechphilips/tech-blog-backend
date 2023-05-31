@@ -3,7 +3,14 @@ const {
     SignupSchema,
   } = require("../validation-schemas/user-schema");
 
-  
+  const loginValidator = async(req, res, next) => {
+    try {
+       await LoginSchema.validateAsync(req.body);
+      return next();
+    } catch (error) {
+        return res.send({ statusCode: 422, message: error.message })
+    }
+  };
   
   const signupValidator = async (req, res, next) => {
     try {
@@ -14,4 +21,4 @@ const {
     }
   };
 
-  module.exports = { signupValidator }
+  module.exports = { signupValidator, loginValidator }
