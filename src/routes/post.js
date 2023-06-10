@@ -5,7 +5,7 @@ const { postValidator } = require("../validators/post-validator");
 const PostController = require('../controllers/PostController');
 
 router.use(cors());
-
+ 
 router.use(
   cors({
     origin: "*",
