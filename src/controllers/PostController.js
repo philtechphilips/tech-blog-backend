@@ -5,7 +5,7 @@ const sharp = require("sharp");
 // Create Post Route
 
 const upload = multer({});
-
+ 
 const newPost = async function (req, res) {
   try {
     const author = req.user.username;
