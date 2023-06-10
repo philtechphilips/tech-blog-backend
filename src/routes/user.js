@@ -10,7 +10,7 @@ router.use(cors());
 router.use(
   cors({
     origin: "*",
-  })
+  }) 
 );
 
 // Authentication Routes

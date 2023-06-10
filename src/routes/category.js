@@ -17,7 +17,6 @@ router.use(
 router.post("/", auth, categoryValidator, CategoryController.newCategory);
 router.get("/", CategoryController.getCategory);
 router.put("/:id", auth, categoryValidator, CategoryController.editCategory);
-router.get("/", CategoryController.getCategory);
 router.get("/:id", auth, CategoryController.getSpecificCategory);
 router.delete("/:id", auth, CategoryController.deleteCategory);
 

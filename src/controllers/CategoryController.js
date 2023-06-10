@@ -77,6 +77,6 @@ const getSpecificCategory = async function (req, res) {
       } catch (e) {
         res.status(400).send(e);
       }
-  };
+  }; 
 
 module.exports = { newCategory, getCategory, editCategory, deleteCategory, getSpecificCategory };
