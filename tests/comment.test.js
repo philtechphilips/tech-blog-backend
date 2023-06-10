@@ -9,7 +9,7 @@ beforeEach(async () => {
 }, 20000);
 
 describe("Category API Test", () => {
-  test("Should create a new comment", async () => {
+  it("Should create a new comment", async () => {
     const response = await request(app)
       .post("/api/comment")
       .send({
@@ -23,7 +23,7 @@ describe("Category API Test", () => {
   });
 
 
-  test("Should get all comment for  particular post", async () => {
+  it("Should get all comment for  particular post", async () => {
     const response = await request(app)
       .get(`/api/comment/${postId}`)
       .send()
