@@ -30,3 +30,4 @@ const getComment = async function (req, res) {
 };
 
 module.exports = { createComment, getComment };
+ 

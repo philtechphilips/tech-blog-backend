@@ -14,6 +14,6 @@ router.use(
 
 // Authentication Routes
 router.post("/", auth, commentValidator, CommentController.createComment);
-router.get("/:id", CommentController.getComment);
+router.get("/:id", CommentController.getComment); 
 
 module.exports = router;
